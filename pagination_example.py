@@ -3,10 +3,10 @@ from serpapi import GoogleSearch
 parameter = {
   "q": "coca cola after:2009-10-05 before:2022-12-04",
   "tbm": "nws",
-  "api_key": "API_KEY",
+  "api_key": "42f0d6cb237988e6331d2edb6fb43fe1216f579654c918f3f41791d840c86a11",
   "start": 0,
-  "num": 100,# page size
-  "end": 500, #  total number of pages
+  "num": 80, # page size
+  "end": 240, #  total number of results
 
 }
 
@@ -19,11 +19,17 @@ result = search.get_dict()
 
 while True:
     if "news_results" in result:
+
+        print('I am a new page', parameter['start'])
+        counter = 0
         for news in result["news_results"]:
          #   print(news["title"])
+            counter += 1
             urls.append(news['link'])
+
+        print(counter)
         if "serpapi_pagination" in result:
-            print('I am a new page', parameter['start'])
+
             if "next" in result["serpapi_pagination"]:
                 parameter['start'] += parameter['num']
                 search = GoogleSearch(parameter) #  this line was missing in your code
