@@ -11,7 +11,7 @@ parameter = {
     #"q": "kudo insurance after:2022-10-05 before:2022-12-04",
     "q": "coca cola after:2009-10-05 before:2022-12-05",
     "tbm": "nws",
-    "api_key": "42f0d6cb237988e6331d2edb6fb43fe1216f579654c918f3f41791d840c86a11",
+    "api_key": "API_KEY",
     # optional pagination parameter
     #  the pagination method can take argument directly
     "start": start,
