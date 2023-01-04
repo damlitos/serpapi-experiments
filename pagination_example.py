@@ -3,7 +3,7 @@ from serpapi import GoogleSearch
 parameter = {
   "q": "coca cola after:2009-10-05 before:2022-12-04",
   "tbm": "nws",
-  "api_key": "42f0d6cb237988e6331d2edb6fb43fe1216f579654c918f3f41791d840c86a11",
+  "api_key": "XXXXXX",
   "start": 0,
   "num": 80, # page size
   "end": 240, #  total number of results
